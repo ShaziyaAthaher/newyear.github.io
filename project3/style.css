@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+section {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(145deg, #000, #222, #000);
+}
+section::before {
+  content: "";
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+  border: 20px solid rgb(196, 13, 141);
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.4vw #222, 0 0 0 0.7vw #fff;
+}
+
+h2 {
+  position: absolute;
+  color: #ffff;
+  text-align: center;
+  font-size: 4vw;
+  transform: skewY(-9deg);
+  text-shadow: 1px 1px 0 #ccc, 2px 2px 0 #ccc, 3px 3px 0 #ccc, 4px 4px 0 #ccc,
+    5px 5px 0 #ccc, 8px 8px 0 rgb(70, 69, 69);
+  animation: animate 3s ease-in-out infinite;
+  z-index: 10;
+}
+h2 span {
+  text-shadow: 1px 1px 0 #ccc, 2px 2px 0 #ccc, 3px 3px 0 #ccc, 4px 4px 0 #ccc,
+    5px 5px 0 #ccc, 6px 6px 0 #ccc, 7px 7px 0 #ccc, 8px 8px 0 rgb(70, 69, 69),
+    9px 9px 0 #ccc;
+  font-weight: 600;
+  font-size: 10vw;
+  animation: animate 3s ease-in-out infinite;
+}
+@keyframes animate {
+  0% {
+    transform: skewY(-9deg) translate(0px, 20px);
+  }
+  50% {
+    transform: skewY(-9deg) translate(0, 60px);
+  }
+  100% {
+    transform: skewY(-9deg) translate(0px, 20px);
+  }
+}
+section i {
+  background: #fff;
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #fff, 0 0 30px #fff, 0 0 60px #fff, 0 0 80px #fff;
+  animation: anima 2s linear infinite;
+}
+@keyframes anima {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+}
